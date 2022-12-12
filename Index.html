@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age</title>
+    <link href="age.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Age Calculator</h1>
+        <div class="main">
+            <div class="day ab">
+                <lebel>Day</lebel><br>
+                <input type="text" maxlength="2" class="inp" id="day">
+            </div>
+            <div class="Month ab">
+                <lebel>Month</lebel><br>
+                <input type="text" maxlength="2" class="inp" id="month">
+            </div>
+            <div class="year ab">
+                <lebel>Year</lebel><br>
+                <input type="text" maxlength="4" class="inp" id="year" >
+            </div>
+        </div>
+        <div class="sub-1">
+            <button type="submit" onclick="age()" class="sub">Submit</button>
+        </div> 
+        <div id="nit"></div>   
+    </div>
+    <script>
+        function age(){
+            let d1 = document.getElementById("day").value;
+            let m1 = document.getElementById("month").value;
+            let y1 = document.getElementById("year").value;
+
+            let day = new Date()
+            let  d2 = day.getDate();
+            let m2 = 1 + day.getMonth();
+            let y2 = day.getFullYear();
+            let month = [ 31 ,28, 31 , 30 , 31 ,30, 31 , 31 , 30, 31 , 30, 31];
+            if(d1 > d2){
+                d2 = d2 +month[m2 - 1];
+                m2 = m2 - 1;
+            }
+            if(m1 > m2){
+                m2 = m2 + 12;
+                y2 = y2 - 1;
+
+           }
+            let D = d2 - d1 ;
+            let M = m2 - m1;
+            let Y = y2 - y1;
+            document.getElementById('nit').innerHTML = "your age is "+" "+  D +  "Days" +" " + M + "month" +" " + + Y + "year" ;
+            
+        }
+            document.getElementById('nit').style.backgroundColor = 'red';
+            document.getElementById('nit').style.fontFamily = 'bold';
+    </script>
+</body>
+</html>

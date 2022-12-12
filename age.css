@@ -1,0 +1,52 @@
+.container{
+    position: fixed;
+    top: 100px;
+    left: 35%;
+    background-color: aqua;
+    height: 400px;
+}
+.main{
+    display: flex;
+}
+.container h1{
+    text-align: center;
+}
+
+.sub-1{
+    text-align: center;
+    justify-items: center;
+    position: absolute;
+    top: 200px;
+    left: 40%;
+    
+
+}
+.sub{
+    width: 80px;
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+.sub:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+.inp{
+    
+    width: 80px;
+    border-radius: 5px;
+    border-left-color: chartreuse;
+    border-right-color: chartreuse;
+    border-top-color: red;
+    border-bottom-color: red; 
+    
+}
+.ab{
+    margin: 20px;
+}
+#nit{
+    position: absolute;
+    top: 250px;
+    left: 90px;
+}
